@@ -1,0 +1,16 @@
+---
+name: Test
+
+on:
+  workflow_run:
+    workflows:
+      - Preflight
+
+jobs:
+  pipeline-component:
+    name: Test Step
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Debug
+        shell: bash
+        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
