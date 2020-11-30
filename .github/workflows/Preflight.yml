@@ -1,0 +1,15 @@
+---
+name: Preflight
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  pipeline-component:
+    name: Preflight Step
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Debug
+        shell: bash
+        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
