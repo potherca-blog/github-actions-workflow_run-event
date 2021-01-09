@@ -1,3 +1,6 @@
+> What if I want to trigger `workflow_run` i.e. "Test" on a PR and have "Test" run on my PR branch? 
+> (This is useful in cases where I want to e.g. run tests and then deploy to a preview environment.)
+
 # GitHub Actions `workflow_run` event
 
 This repository contains a code example to accompany my answer to the question [_"How to use the GitHub Actions `workflow_run`  event?"_](stackoverflow.com/questions/63343937/how-to-use-the-new-event-workflow-run-of-gtihub-action-added-recently/), asked on StackOverflow
