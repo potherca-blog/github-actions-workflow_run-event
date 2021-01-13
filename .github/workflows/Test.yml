@@ -14,6 +14,9 @@ jobs:
     name: Test Step
     runs-on: ubuntu-18.04
     steps:
+      - run: echo "$GITHUB_CONTEXT"
+        env: 
+          GITHUB_CONTEXT: ${{ toJson(github) }}
       - uses: actions/checkout@v2
       - name: Show branches
         run: git branch

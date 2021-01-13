@@ -10,6 +10,9 @@ jobs:
     name: Preflight Step
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v2
+      - name: Show branches
+        run: git branch
       - name: Debug
         shell: bash
         run: env
