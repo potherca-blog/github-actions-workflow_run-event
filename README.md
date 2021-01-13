@@ -1,3 +1,23 @@
+# GitHub Actions `workflow_run` event
+
+This repository contains a code example to accompany my answer to the question [_"How to use the GitHub Actions `workflow_run`  event?"_](stackoverflow.com/questions/63343937/how-to-use-the-new-event-workflow-run-of-gtihub-action-added-recently/), asked on StackOverflow
+
+## The Question
+
+> Could anybody tell me how to implement the **example** proposed using the new event `workflow_run`? The documentation only provide a very simple example:
+> 
+> ```yaml
+> on:
+>   workflow_run:
+>     workflows: ["Run Tests"]
+>     branches: [main]
+>     types: 
+>       - completed
+>       - requested
+> ```
+
+## My Answer
+
 To get the example to work (i.e. to have one workflow wait for another to complete) you need two files. Both files live in the `.github/workflows` folder of a repository.
 
 The first file would be set up as usual. This file will be triggered by whatever event(s) are set in the `on` section:
