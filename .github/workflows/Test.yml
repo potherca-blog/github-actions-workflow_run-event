@@ -16,7 +16,10 @@ jobs:
     steps:
       - run: echo "$GITHUB_CONTEXT"
         env: 
-          GITHUB_CONTEXT: ${{ github.event.workflow_run.head_branch }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      - run: echo "$HEAD_BRANCH"
+        env: 
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.workflow_run.head_branch }}
