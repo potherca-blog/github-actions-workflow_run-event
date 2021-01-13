@@ -19,7 +19,7 @@ jobs:
           GITHUB_CONTEXT: ${{ github.event.workflow_run.head_branch }}
       - uses: actions/checkout@v2
         with:
-          ref: ${{ event.workflow_run.head_branch }}
+          ref: ${{ github.event.workflow_run.head_branch }}
       - name: Show branches
         run: git branch
       - name: Debug
