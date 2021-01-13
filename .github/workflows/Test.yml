@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Debug
         shell: bash
-        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
+        run: env
