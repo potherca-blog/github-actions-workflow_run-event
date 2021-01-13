@@ -10,7 +10,7 @@ on:
       - requested
 
 jobs:
-  pipeline-component:
+  test-job:
     name: Test Step
     runs-on: ubuntu-18.04
     steps:
