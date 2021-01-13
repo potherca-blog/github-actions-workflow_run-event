@@ -6,7 +6,7 @@ on:
   - push
 
 jobs:
-  pipeline-component:
+  preflight-job:
     name: Preflight Step
     runs-on: ubuntu-18.04
     steps:
