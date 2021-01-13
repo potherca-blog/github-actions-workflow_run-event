@@ -15,7 +15,7 @@ on:
   - push
 
 jobs:
-  pipeline-component:
+  preflight-job:
     name: Preflight Step
     runs-on: ubuntu-18.04
     steps:
@@ -36,7 +36,7 @@ on:
       - Preflight
 
 jobs:
-  pipeline-component:
+  test-job:
     name: Test Step
     runs-on: ubuntu-18.04
     steps:
