@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Debug
         shell: bash
-        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
+        run: env
 ```
 
 The second file states that it should only trigger `on` the `workflow_run` event for any `workflows` with the name `Preflight`:
@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: Debug
         shell: bash
-        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
+        run: env
 ```
 
 This is exactly the same as [the example from the GitHub Actions manual](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_run).
