@@ -5,12 +5,12 @@ on:
   workflow_run:
     workflows:
       - Preflight
+    types:
+      - completed
 
 jobs:
-  pipeline-component:
+  test-job:
     name: Test Step
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Debug
-        shell: bash
-        run: 'echo -e "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}\\nGITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"'
+      - run: env
