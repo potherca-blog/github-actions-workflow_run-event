@@ -8,6 +8,7 @@ on:
 jobs:
   preflight-job:
     name: Preflight Step
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     steps:
-      - run: env
+      - name: xcode version
+        run: xcodebuild -version -sdk
