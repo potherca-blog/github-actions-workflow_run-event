@@ -1,0 +1,33 @@
+---
+name: Test2
+
+on:
+  workflow_run:
+    workflows:
+      - Test
+    types:
+      - completed
+
+jobs:
+  test-job:
+    name: Test Step
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+      - run: git branch
+      - run: xcodebuild -version -sdk
+
+  test-job-2:
+    name: Test Step 2
+    runs-on: macOS-latest
+    #if: startsWith(github.ref, 'refs/tags/') && ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Xcode version
+        run: xcodebuild -version -sdk
