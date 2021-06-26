@@ -1,0 +1,12 @@
+---
+name: Preflight
+
+on:
+  - push
+
+jobs:
+  preflight-job:
+    name: Preflight Step
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ramen"
