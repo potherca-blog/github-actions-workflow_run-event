@@ -2,7 +2,7 @@
 
 This repository contains a code example to accompany my answer to the question [_"How to use the GitHub Actions `workflow_run`  event?"_](https://stackoverflow.com/questions/63343937/how-to-use-the-new-event-workflow-run-of-gtihub-action-added-recently/), asked on StackOverflow
 
-## The Question!
+## The Question!!
 
 > Could anybody tell me how to implement the **example** proposed using the new event `workflow_run`? The documentation only provide a very simple example:
 > 
