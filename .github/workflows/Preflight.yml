@@ -3,7 +3,6 @@ name: Preflight
 
 on:
   - pull_request
-  - push
 
 jobs:
   preflight-job:
