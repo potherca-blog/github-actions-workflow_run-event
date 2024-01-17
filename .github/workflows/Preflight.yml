@@ -1,9 +1,13 @@
 ---
 name: Preflight
 
+#on:
+  #- pull_request
+  #- push
+
 on:
-  - pull_request
-  - push
+  push:
+    branches: [ main ]
 
 jobs:
   preflight-job:
